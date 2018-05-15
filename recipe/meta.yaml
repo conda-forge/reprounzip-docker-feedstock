@@ -1,6 +1,6 @@
 {% set name = "reprounzip-docker" %}
-{% set version = "1.0.10" %}
-{% set sha256 = "ecfbdf1726e66140ccd7ea308c70a08382bfd953d35def94e8ec84cedc6f9e02" %}
+{% set version = "1.0.13" %}
+{% set sha256 = "f750d8b3915362e20d05383f9fb5dea902fb6cc3f4afb0b9bacf56a79c188f83" %}
 
 package:
   name: {{ name|lower }}
