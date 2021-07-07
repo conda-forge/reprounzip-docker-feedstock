@@ -1,6 +1,6 @@
 {% set name = "reprounzip-docker" %}
-{% set version = "1.0.16" %}
-{% set sha256 = "21eaee24deab699afc7f21ada6b943ff6a10dc612c823400681451d786af42c7" %}
+{% set version = "1.1" %}
+{% set sha256 = "224ac625fc422d47bd39893acaef6b3567cc8480b26b07ca161e043252f7e317" %}
 
 package:
   name: {{ name|lower }}
@@ -23,7 +23,7 @@ requirements:
     - setuptools
   run:
     - python
-    - reprounzip >=1.0.10
+    - reprounzip >=1.1
     - rpaths >=0.8
 
 test:
@@ -34,7 +34,7 @@ test:
     - reprounzip docker --help
 
 about:
-  home: http://github.com/ViDA-NYU/reprozip
+  home: http://github.com/VIDA-NYU/reprozip
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
@@ -48,7 +48,7 @@ about:
     (packing step). A reviewer can then extract the experiment in his
     environment to reproduce the results (unpacking step).
   doc_url: https://docs.reprozip.org/
-  dev_url: https://github.com/ViDA-NYU/reprozip
+  dev_url: https://github.com/VIDA-NYU/reprozip
 
 extra:
   recipe-maintainers:
