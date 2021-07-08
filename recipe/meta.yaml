@@ -1,6 +1,6 @@
 {% set name = "reprounzip-docker" %}
-{% set version = "1.0.16" %}
-{% set sha256 = "21eaee24deab699afc7f21ada6b943ff6a10dc612c823400681451d786af42c7" %}
+{% set version = "1.1" %}
+{% set sha256 = "224ac625fc422d47bd39893acaef6b3567cc8480b26b07ca161e043252f7e317" %}
 
 package:
   name: {{ name|lower }}
@@ -14,16 +14,16 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=2.7,<3|>=3.5
     - setuptools
   run:
-    - python
-    - reprounzip >=1.0.10
+    - python >=2.7,<3|>=3.5
+    - reprounzip >=1.1
     - rpaths >=0.8
 
 test:
@@ -34,11 +34,11 @@ test:
     - reprounzip docker --help
 
 about:
-  home: http://github.com/ViDA-NYU/reprozip
+  home: http://github.com/VIDA-NYU/reprozip
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Linux tool enabling reproducible experiments (docker plugin)'
+  summary: Linux tool enabling reproducible experiments (docker plugin)
   description: |
     ReproZip is a tool aimed at simplifying the process of creating reproducible
     experiments from command-line executions, a frequently-used common
@@ -48,7 +48,7 @@ about:
     (packing step). A reviewer can then extract the experiment in his
     environment to reproduce the results (unpacking step).
   doc_url: https://docs.reprozip.org/
-  dev_url: https://github.com/ViDA-NYU/reprozip
+  dev_url: https://github.com/VIDA-NYU/reprozip
 
 extra:
   recipe-maintainers:
